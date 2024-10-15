@@ -1,11 +1,12 @@
-function isPrime(n){
-    if (n<2){
-        return false;
+function fibonacci(n){
+    const fib = [0, 1]
+    for(let i = 2; i < n; i++){
+        fib[i] = fib[i-1] + fib[i-2]
     }
-    for(let i=2; i<n; 1++)
-        if(n%i === 0){
-            return false;
-        }
+    return fib
 }
-console.log(isPrime(1))
-console.log(isPrime(5))
+
+console.log(fibonacci(2))
+console.log(fibonacci(3))
+console.log(fibonacci(7))
+
