@@ -1,16 +1,11 @@
-function isThePowerOfTwo(n) {
-    if (n < 1) {
-        return false; // Fixed the syntax error here
-    }
-    while (n > 1) {
-        if (n % 2 !== 0) {
-            return false; // If n is not even, it's not a power of two
+function linearSearch(arr, target) {
+    for (let i = 0; i < arr.length; i++) { 
+        if (arr[i] === target) {
+            return i; 
         }
-        n = n / 2; // Divide n by 2
     }
-    return true; // If we reach here, n is a power of two
+    return -1; 
 }
-
-console.log(isThePowerOfTwo(1)); // Output: true
-console.log(isThePowerOfTwo(2)); // Output: true
-console.log(isThePowerOfTwo(5)); // Output: false
+console.log(linearSearch([-5, 2, 10, 4, 6], 10)); // Output: 2
+console.log(linearSearch([-5, 2, 10, 4, 6], 6)); // Output: 4
+console.log(linearSearch([-5, 2, 10, 4, 6], 20)); // Output: -1
