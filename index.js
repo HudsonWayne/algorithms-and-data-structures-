@@ -1,12 +1,16 @@
-function fibonacci(n){
-    const fib = [0, 1]
-    for(let i = 2; i < n; i++){
-        fib[i] = fib[i-1] + fib[i-2]
+function isThePowerOfTwo(n) {
+    if (n < 1) {
+        return false; // Fixed the syntax error here
     }
-    return fib
+    while (n > 1) {
+        if (n % 2 !== 0) {
+            return false; // If n is not even, it's not a power of two
+        }
+        n = n / 2; // Divide n by 2
+    }
+    return true; // If we reach here, n is a power of two
 }
 
-console.log(fibonacci(2))
-console.log(fibonacci(3))
-console.log(fibonacci(7))
-
+console.log(isThePowerOfTwo(1)); // Output: true
+console.log(isThePowerOfTwo(2)); // Output: true
+console.log(isThePowerOfTwo(5)); // Output: false
