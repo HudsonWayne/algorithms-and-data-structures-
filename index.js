@@ -1,5 +1,4 @@
-let mood = "good";
-console.log(mood);
+let chikwereti = 200;
+chikwereti = chikwereti - 100;
 
-mood = "bad";
-console.log(mood);
+console.log(chikwereti); // Output: 100
